@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home Page display</title>
+</head>
+<body class="parent">
+    <nav>
+        <!-- <ul class="sidebar">
+            <li><a href="">VeerDg_Creation</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Forum</a></li>
+            <li><a href="">Login</a></li>
+        </ul> -->
+        <ul>
+            <li><a href="">VeerDg_Creation</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Forum</a></li>
+            <li><a href="">Login</a></li>
+        </ul>
+    </nav>
+    <div id="header">
+        <p><h1>Welcome to <span class="bold">VeerDg_Creation</span></h1></p>
+        <div id="btn">
+            <p>Explore</p>
+        </div>
+    </div>
+    <div id="imagecarousal">
+    <div class="image-slider">
+        <div id="slider">
+        <img src="img1.jpg" alt="">
+        <img src="img2.jpg" alt="">
+        <img src="img3.webp" alt="">
+        <img src="img4.jpg" alt="">
+        </div>
+    </div>
+    <div class="btn-slider">
+        <span id="btn1" class="actv"></span>
+        <span id="btn2"></span>
+        <span id="btn3"></span>
+        <span id="btn4"></span>
+    </div>
+    </div>
+    <script>
+        var slider=document.getElementById("slider");
+        var btn1=document.getElementById("btn1");
+        var btn2=document.getElementById("btn2");
+        var btn3=document.getElementById("btn3");
+        var btn4=document.getElementById("btn4");
+        var btn=document.getElementById("btn");
+        var ic=document.getElementById("imagecarousal");
+        var header=document.getElementById("header");
+        btn1.onclick=()=>{
+            slider.style.transform="translateX(0px)";
+            btn1.classList.add("actv");
+            btn2.classList.remove("actv");
+            btn3.classList.remove("actv");
+            btn4.classList.remove("actv");
+        }
+        btn2.onclick=()=>{
+            slider.style.transform="translateX(-100%)";
+            btn2.classList.add("actv");
+            btn1.classList.remove("actv");
+            btn3.classList.remove("actv");
+            btn4.classList.remove("actv");
+        }
+        btn3.onclick=()=>{
+            slider.style.transform="translateX(-200%)";
+            btn3.classList.add("actv");
+            btn2.classList.remove("actv");
+            btn1.classList.remove("actv");
+            btn4.classList.remove("actv");
+        }
+        btn4.onclick=()=>{
+            slider.style.transform="translateX(-300%)";
+            btn4.classList.add("actv");
+            btn2.classList.remove("actv");
+            btn3.classList.remove("actv");
+            btn1.classList.remove("actv");
+        }
+        btn.onclick=()=>{
+            header.style.display="none";
+            ic.style.display="block";
+        }
+
+    </script>
+</body>
+</html>
